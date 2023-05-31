@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+/*     MAIN CONTENT / COUNTRIES         */
+.land {
+  fill: #cccccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  transition: ease-in-out 1s;
+  stroke-width: 0.7;
+}
+.europeMap {
+  position: relative;
+  display: flex;
+  height: 700px;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  bottom: 10rem;
+}
+.land:hover {
+  fill: #684242;
+}
+.europeMap svg {
+  width: 850px;
+  height: 700px;
+}
+.sehir-adi {
+  background: rgb(192, 174, 174);
+  border-radius: 8px;
+  position: absolute;
+  opacity: 0;
+  font-size: 14px;
+  padding: 10px;
+  visibility: hidden;
+  color: rgb(8, 8, 8);
+}
+
+.aktif {
+  opacity: 1;
+  visibility: visible;
+}
+/*   NAVBAR / ICON       */
+.europe_flag {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  position: absolute;
+  color: #000;
+  transition: all 0.3s;
+}
+.europe_flag:hover {
+  color: #684242;
+}
+
+/* MAIN CARD    */
+.mainCard_container {
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  height: 210px;
+  position: relative;
+  top: 3rem;
+  left: 50%;
+  background: #928c8c31;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  gap: 10px;
+  transition: all 0.5s;
+}
+.mainCard_container:hover {
+  box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.45);
+}
+
+.mainCard_photo > img {
+  height: 210px;
+  width: 320px;
+  object-fit: scale-down;
+  border-radius: 10px 0 0 10px;
+}
+.mainCard_text {
+  width: 50%;
+  padding: 5px 5px 0 0;
+}
+.btnTurkey {
+  color: black;
+  width: 10rem;
+  height: 3rem;
+  z-index: 999;
+  cursor: pointer;
+}
