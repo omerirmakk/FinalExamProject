@@ -1,5 +1,5 @@
-import { BiHomeAlt } from "react-icons/bi";
-import Link from "next/link";
+import { BiHomeAlt } from 'react-icons/bi';
+import Link from 'next/link';
 const Layout = ({ children }) => {
   return (
     <>

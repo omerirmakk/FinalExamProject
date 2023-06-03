@@ -13,8 +13,8 @@ export default function Home() {
     for (let i = 0; i < europeMap.length; i++) {
       europeMap[i].addEventListener('mousemove', function (e) {
         countryName.classList.add('sehir-adi', 'aktif');
-        countryName.style.left = e.clientX + 2 + 'px';
-        countryName.style.top = e.clientY + 175 + 'px';
+        countryName.style.left = e.clientX + -150 + 'px';
+        countryName.style.top = e.clientY + 50 + 'px';
 
         if (window.innerWidth < 950) {
           countryName.style.top = e.clientY + 300 + 'px';
@@ -26,12 +26,6 @@ export default function Home() {
         }
 
         countryName.innerHTML = this.getAttribute('title');
-
-        if (window.innerWidth > 700) {
-          setInterval(() => {
-            window.location.reload();
-          }, 90000);
-        }
       });
 
       console.log(window.innerWidth);
@@ -45,7 +39,7 @@ export default function Home() {
         router.push(`/countries/${this.getAttribute('title')}`);
       });
     }
-  }, []);
+  });
   return (
     <div className="europeMap">
       <svg
