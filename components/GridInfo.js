@@ -39,7 +39,7 @@ const GridInfo = ({
       </div>
       <div className="Grid_flex2">
         Ülke Hakkında Bilgi
-        <div>{Desc}</div>
+        <div style={{ marginTop: '30px' }}>{Desc}</div>
       </div>
     </div>
   );

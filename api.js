@@ -5,7 +5,7 @@ export async function fetchCountryData() {
     try {
       const response = await fetch('https://localhost:44314/api/Turkey');
       if (!response.ok) {
-        throw new Error('Failed to fetch country data');
+        throw new Error('Maalesef data fetch edilemedi');
       }
       countryData = await response.json();
     } catch (error) {

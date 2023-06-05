@@ -11,6 +11,7 @@ body {
   width: 80%;
   height: 100vh;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 /*     MAIN CONTENT / COUNTRIES         */
 .land {
@@ -31,7 +32,7 @@ body {
   bottom: 10rem;
 }
 .land:hover {
-  fill: #684242;
+  fill: #574444;
 }
 .europeMap svg {
   width: 850px;
@@ -100,35 +101,16 @@ body {
   width: 70%;
   position: relative;
   top: 80px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
   gap: 35%;
   border: none;
 }
-.Flag_title {
-  position: relative;
-  font-size: 7.5rem;
-  text-align: center;
-  padding: 10px;
-  background-image: radial-gradient(
-    circle,
-    rgb(234, 226, 226) 5%,
-    rgb(30, 28, 28) 75%
-  );
-  color: transparent;
-  background-clip: text;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  border-radius: 15px;
-  height: 10%;
-}
+
 .Flag_image {
-  background-color: aliceblue;
   border-radius: 15px;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   height: 40vh;
 }
@@ -151,21 +133,11 @@ body {
 
 .div1 {
   grid-area: 1 / 1 / 3 / 3;
-  background-color: #000;
 }
 .div2 {
   grid-area: 1 / 3 / 3 / 5;
-  position: relative;
 }
-.div2 > img {
-  width: 80%;
-  left: 35px;
-  top: 25px;
-  height: 85%;
-  z-index: -99;
-  position: absolute;
-  border-radius: 25px;
-}
+
 .div3 {
   grid-area: 1 / 5 / 3 / 7;
 }
@@ -198,20 +170,19 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10%;
-  transition: ease-in 0.5s;
+  transition: ease-in-out 0.5s;
   padding: 20px;
   font-size: 1.5rem;
 }
 .main_things:hover {
   background: rgba(237, 215, 215, 0.08);
   border-radius: 16px;
+  transform: translateY(-4px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15.2px);
   -webkit-backdrop-filter: blur(15.2px);
 }
-.svgText {
-  width: 100%;
-}
+
 .filled-heading {
   text-transform: uppercase;
   font-family: 'Courier New', Courier, monospace;
@@ -233,5 +204,43 @@ body {
   35%,
   65% {
     transform: scale(3) rotate(0deg);
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+  .Flag_container {
+    width: 425px;
+    margin: 0 auto;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .Grid_container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main_things {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .svgText {
+    width: 25rem !important;
+    margin-left: 1px !important;
+    transform: translate(-1%, -50%) !important;
+  }
+  .filled-heading {
+    font-size: 5rem;
   }
 }
